@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+img{
+    max-width: 180px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50vh;
+}
+ 
+
+#rolador{
+    text-align: center;
+    font-size: 2em;
+}
+
+input{
+    text-align: center;
+}

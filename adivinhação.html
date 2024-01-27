@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function adivinhar() {
+            let numero = Math.round(Math.random() * 10)
+            let res = document.querySelector('p#res')
+            let adiv = Number(document.querySelector('input#numc').value)
+            if (adiv == '') {
+                res.innerHTML = 'bota a porra de um numero lerdao'
+            } else {
+                if (adiv < 0 || adiv > 10) {
+                    res.innerHTML = 'escolhe de 0 a 10 burrao'
+                } else {
+                    if (numero === adiv) {
+                        res.innerHTML = 'voce acertou!!!!'
+                    } else {
+                        res.innerHTML = `errou, o numero era ${numero}`
+                    }
+                }
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Vamos brincar de adivinhação?</h1>
+    <p>Escolha um número de 0 a 10</p>
+    <label for="num">
+        <input type="number" name="" id="numc"> <input type="button" value="Adivinhar" onclick="adivinhar()">
+    </label>
+    <p id="res"></p>
+</body>
+
+</html>

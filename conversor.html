@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function converter() {
+            var kelvin = document.querySelector('input#kelvin');
+            var fah = document.querySelector('input#fahrenheit');
+            var temp = Number(document.querySelector('input#temp').value);
+            var res = document.querySelector('p#res');
+            var tempconv;
+
+            if (kelvin.checked) {
+                tempconv = temp + 273;
+                res.innerHTML = `A temperatura convertida é ${tempconv}K`;
+            } else if (fah.checked) {
+                tempconv = (temp * 9 / 5) + 32;
+                res.innerHTML = `A temperatura convertida é ${tempconv}°F`;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Conversor de temperatura</h1>
+    <h2>Escreva uma temperatura em celsius</h2>
+    <label for="conver"><input type="number" name="" id="temp"></label> <br>
+    <input type="radio" name="dsa" id="fahrenheit"> Fahrenheit
+    <input type="radio" name="dsa" id="kelvin"> Kelvin <br> <br>
+    <input type="button" value="Converter" onclick="converter()">
+    <p id="res"></p>
+</body>
+
+</html>
